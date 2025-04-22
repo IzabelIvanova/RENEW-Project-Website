@@ -69,6 +69,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+/*Сгъване и разгъване на текст*/
+document.querySelectorAll('.toggle-abstract').forEach(button => {
+	button.addEventListener('click', () => {
+		const abstract = button.parentElement;
+		const shortText = abstract.querySelector('.short-text');
+		const fullText = abstract.querySelector('.full-text');
+		const isExpanded = fullText.style.display === 'inline';
+
+		const lang = document.documentElement.lang;
+
+		if (isExpanded) {
+			fullText.style.display = 'none';
+			shortText.style.display = 'inline';
+			button.textContent = lang === 'bg' ? 'Виж повече' : 'Show more';
+		} else {
+			fullText.style.display = 'inline';
+			shortText.style.display = 'none';
+			button.textContent = lang === 'bg' ? 'Скрий' : 'Show less';
+		}
+	});
+});
+
+/*Сгъване и разгъване на текст
+	document.querySelectorAll('.toggle-abstract').forEach(button => {
+		button.addEventListener('click', () => {
+			const abstract = button.parentElement;
+			const shortText = abstract.querySelector('.short-text');
+			const fullText = abstract.querySelector('.full-text');
+
+			const isExpanded = fullText.style.display === 'inline';
+
+			if (isExpanded) {
+				fullText.style.display = 'none';
+				shortText.style.display = 'inline';
+				button.textContent = 'Виж повече';
+			} else {
+				fullText.style.display = 'inline';
+				shortText.style.display = 'none';
+				button.textContent = 'Скрий';
+			}
+		});
+	});*/
 
 /* Path EN/BG Navigation */
 document.addEventListener("DOMContentLoaded", function () {
