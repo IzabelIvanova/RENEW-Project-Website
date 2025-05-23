@@ -3137,7 +3137,7 @@ table tr:last-child td:last-child {
 
 	.statistics li strong,
 	.statistics li b {
-		font-size: 1.5em;
+		font-size: inherit;
 	}
 
 }
@@ -3146,7 +3146,6 @@ table tr:last-child td:last-child {
 
 	.statistics {
 		display: block;
-		width: 20em;
 		max-width: 100%;
 		margin: 0 auto 2em auto;
 	}
@@ -3157,7 +3156,7 @@ table tr:last-child td:last-child {
 
 	.statistics li strong,
 	.statistics li b {
-		font-size: 2.5em;
+		font-size: inherit;
 	}
 
 }
@@ -3284,7 +3283,7 @@ table tr:last-child td:last-child {
 }
 
 #header.alt h1 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 }
 
 #header.alt>* {
@@ -3362,7 +3361,7 @@ table tr:last-child td:last-child {
 	}
 
 	#header.alt h1 {
-		font-size: 2.5em;
+		font-size: 2em;
 	}
 
 }
