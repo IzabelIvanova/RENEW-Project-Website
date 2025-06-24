@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var isEnglish = window.location.pathname.includes("/en-renew-project/");
     var breadcrumb = document.getElementById("breadcrumb");
 
+	if (!breadcrumb) return;
+
     var titlesBG = {
         "index.html": "Начало",
         "packages.html": "Работни пакети",

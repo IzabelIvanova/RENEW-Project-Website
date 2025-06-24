@@ -1992,13 +1992,21 @@ hr {
 .news-image {
 	width: 100%;
 	display: block;
+	height: 300px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+.news-image:hover {
+  transform: scale(1.02);
 }
 .news-overlay {
 	position: absolute;
+	height: 140px;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.27);
+	background: rgba(0, 0, 0, 0.6);
 	color: #ffffff;
 	padding: 10px;
 	text-align: center;
@@ -2007,7 +2015,6 @@ hr {
 	display: block;
 	text-decoration: none;
 	color: inherit;
-	
 }
 
 #h3-news{
