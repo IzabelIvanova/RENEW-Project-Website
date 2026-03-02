@@ -3931,6 +3931,13 @@ body.is-preload #header.alt .logo {
 	max-width: 60%;
 }
 
+/* BNP logo should be significantly smaller than EU logo (roughly one third).
+   Applies globally wherever #logo-bnp is used. */
+#logo-bnp{
+	max-width: 50%;
+	height: auto;
+}
+
 #footer .copyright {
 	width: 100%;
 	margin: 2.5em 0 2em 0;

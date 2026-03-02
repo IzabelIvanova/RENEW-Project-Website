@@ -106,10 +106,14 @@ document.addEventListener("DOMContentLoaded", function () {
         var fileName = currentPath.split("/").pop() || "index.html";
         var newUrl;
 
+        // Construct relative paths instead of absolute ones. When running from file://
+        // a leading slash goes to the filesystem root, which breaks navigation.
         if (isBulgarian) {
-            newUrl = "/en-renew-project/en-" + fileName;
+            // Bulgarian pages are at repo root, english under en-renew-project/
+            newUrl = "en-renew-project/en-" + fileName;
         } else {
-            newUrl = "/" + fileName.replace("en-", "");
+            // We are already inside en-renew-project; go up one level and remove prefix.
+            newUrl = "../" + fileName.replace(/^en-/, "");
         }
 
         window.location.href = newUrl;
